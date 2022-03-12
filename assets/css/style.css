@@ -1,0 +1,105 @@
+/*********************************************
+VARIABLES
+*********************************************/
+
+:root {
+    --mainColor: #FF5A00;
+    --mainFontFamaily: 'Lato', sans-serif;
+    --mainBodyColor: #ECEFF1;
+}
+
+body.day {
+    --navigationBgColor: #fff;
+    --navigationBorderColor: #ddd;
+    --switchColor: #000;
+}
+
+body.night {
+    --navigationBgColor: #000;
+    --switchColor: #fff;
+}
+
+/*********************************************
+BASE STYLE
+*********************************************/
+
+body {
+    font-family: var(--mainFontFamaily);
+    background-color: var(--mainBodyColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+/*********************************************
+NAVIGATION
+*********************************************/
+
+.navigation {
+    background-color: var(--navigationBgColor);
+    border-bottom: 1px solid var(--navigationBorderColor);
+}
+
+.navigation .container {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .logo a {
+    font-weight: 900;
+    color: var(--mainColor);
+    font-size: 40px;
+}
+
+.navigation .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .menu li {
+    display: inline-block;
+    margin: 0 30px 0 0;
+
+}
+
+.navigation .menu li:last-child {
+    margin: 0;
+}
+
+.navigation .menu li a {
+    font-weight: 700;
+    color: var(--mainColor);
+}
+
+.navigation .menu li a:hover {
+    color: var(--menuHoverColor);
+}
+
+.navigation .changeTheme {
+    width: 40px;
+    height: 40px;
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    color: var(--switchColor);
+    text-align: center;
+    line-height: 40px;
+}
+
+body.day .navigation .changeTheme .fa-sun {
+    display: none;
+}
+
+body.night .navigation .changeTheme .fa-moon {
+    display: none;
+}
